@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 Welcome to the world 5 version!!
+=======
+Welcome to the world 4 version!!
+output from git
+>>>>>>> 33a066e3aa4090e058057984a4abb67943c3c84a
