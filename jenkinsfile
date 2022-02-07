@@ -1,0 +1,29 @@
+
+pipeline {
+    agent any
+    tools {
+        maven 'M3'
+    }
+  stages {
+    stage('SonarQube') {
+        steps {
+            withSonarQubeEnv("MySonarQubeServer") {
+                sh "mvn clean verify sonar:sonar -Dsonar.projectkey=devops-demo1"
+            }
+        
+            }
+        }
+  stage('Build') {
+      steps {
+      echo "Build completed"
+      }
+  }
+   stage('Deploy') {
+      steps {
+      echo "Deploy completed"
+      }
+  }
+
+  }
+ }
+
